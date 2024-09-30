@@ -25,3 +25,15 @@ more_movies = [
 more_movies.each do |movie|
   Movies.create!(movie)
 end
+
+Movies.find_or_create_by!(title: "Inception", rating: "PG-13", description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.", release_date: "2010-07-16")
+
+Movies.find_or_create_by!(title: "The Lion King", rating: "G", description: "A young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.", release_date: "1994-06-24")
+
+Movies.find_or_create_by!(title: "The Shawshank Redemption", rating: "R", description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.", release_date: "1994-09-22")
+
+Movies.find_or_create_by!(title: "Parasite", rating: "R", description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.", release_date: "2019-05-30")
+
+Movies.find_or_create_by!(title: "Toy Story", rating: "G", description: "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.", release_date: "1995-11-22")
+
+Movies.find_or_create_by!(title: "The Matrix", rating: "R", description: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.", release_date: "1999-03-31")

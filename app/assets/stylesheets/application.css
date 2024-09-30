@@ -13,3 +13,69 @@
  *= require_tree .
  *= require_self
  */
+/* Make the page cover the full screen width */
+body {
+    background-color: #e6f7ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px #b0c4de;
+    border: 2px solid #8aacc8;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    cursor: pointer;
+    background-color: #d1e0ff;
+}
+
+.sorted-asc {
+    background-color: #c6aeff !important;
+    color: white;
+}
+
+.sorted-desc {
+    background-color: #c6aeff !important;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f8ff;
+}
+
+tbody tr:hover {
+    background-color: #e6e6ff;
+}
+
+tfoot {
+    background-color: #d1e0ff;
+}
+
+tfoot td {
+    font-weight: bold;
+    color: #333;
+}
+
+p.notice {
+    text-align: center;
+    color: #003366;
+    background-color: #cce0ff;
+    padding: 10px;
+    border: 1px solid #99bbff;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 50%;
+}

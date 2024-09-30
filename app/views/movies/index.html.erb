@@ -1,11 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<table class="table table-striped col-md-12" id="movies">
+<table class="table" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
+      <th class="<%= highlight_column('title') %>">
+        <%= sortable("title", "Movie Title") %>
+      </th>
+      <th class="<%= highlight_column('rating') %>">
+        <%= sortable("rating", "Rating") %>
+      </th>
+      <th class="<%= highlight_column('release_date') %>">
+        <%= sortable("release_date", "Release Date") %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +25,13 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="3" style="text-align: center;">
-        Total Movies: <%= @movies.count %>
-      </td>
+      <td colspan="3" style="text-align: center; margin: 20px;">
+  Total Movies: <%= @movies.count %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary' %>
+</td>
+
     </tr>
+
   </tfoot>
 </table>

@@ -6,18 +6,18 @@
     <%= form_tag movies_path, class: 'movie-form' do %>
       
       <div class="form-group">
-        <%= label :movies, :title, 'Title', class: 'form-label' %>
-        <%= text_field :movies, :title, class: 'form-control' %>
+        <%= label :movie, :title, 'Title', class: 'form-label' %>
+        <%= text_field :movie, :title, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= label :movies, :rating, 'Rating', class: 'form-label' %>
-        <%= select :movies, :rating, ['G','PG','PG-13','R','NC-17'], {}, class: 'form-control' %>
+        <%= label :movie, :rating, 'Rating', class: 'form-label' %>
+        <%= select :movie, :rating, ['G','PG','PG-13','R','NC-17'], {}, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= label :movies, :release_date, 'Released On', class: 'form-label' %>
-        <%= date_select :movies, :release_date, {}, class: 'form-control-inline' %>
+        <%= label :movie, :release_date, 'Released On', class: 'form-label' %>
+        <%= date_select :movie, :release_date, {}, class: 'form-control-inline' %>
       </div>
 
       <div class="form-actions">

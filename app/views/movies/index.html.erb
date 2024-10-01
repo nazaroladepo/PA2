@@ -17,7 +17,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.title %></td>
+        <td><%= link_to movie.title, movie_path(movie) %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.release_date %></td>
       </tr>
@@ -28,7 +28,7 @@
       <td colspan="3" style="text-align: center; margin: 20px;">
   Total Movies: <%= @movies.count %>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <%= link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary' %>
+  <%= link_to 'Add new movie', new_movie_path, :class => 'btn show-btn' %>
 </td>
 
     </tr>

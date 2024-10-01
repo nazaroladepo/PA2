@@ -1,12 +1,41 @@
-<% content_for :title, "Editing movie" %>
+<% content_for :title, "Editing Movie" %>
 
-<h1>Editing movie</h1>
+<div class="movie-container">
+  
+  <h1 class="page-title">Editing Movie</h1>
+  
+  <div class="form-container">
+    <%= form_with model: @movie, local: true do |f| %>
+      
+      <div class="form-group">
+        <%= f.label :title, "Title", class: "form-label" %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
 
-<%= render "form", movie: @movie %>
+      <div class="form-group">
+        <%= f.label :rating, "Rating", class: "form-label" %>
+        <%= f.select :rating, ['G', 'PG', 'PG-13', 'R', 'NC-17'], {}, class: "form-control" %>
+      </div>
 
-<br>
+      <div class="form-group">
+        <%= f.label :release_date, "Released On", class: "form-label" %>
+        <%= f.date_select :release_date, {}, class: "form-control-inline" %>
+      </div>
 
-<div>
-  <%= link_to "Show this movie", @movie %> |
-  <%= link_to "Back to movies", movies_path %>
+      <div class="form-group">
+        <%= f.label :director, "Description", class: "form-label" %>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit "Save Changes", class: "btn btn-primary" %>
+      </div>
+      
+    <% end %>
+  </div>
+
+  <div class="navigation-links">
+    <%= link_to "Back to movies", movies_path, class: "btn back-btn" %>
+  </div>
+
 </div>
